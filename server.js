@@ -20,8 +20,9 @@ const MIME_TYPES = {
 const server = http.createServer((req, res) => {
   console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
   
-  // 处理URL，如果是根路径则返回index.html
-  let filePath = '.' + req.url;
+  // 处理URL，去除查询参数，只保留路径部分
+  const url = new URL(req.url, `http://${req.headers.host}`);
+  let filePath = '.' + url.pathname;
   if (filePath === './') {
     filePath = './index.html';
   }

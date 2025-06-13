@@ -58,6 +58,10 @@ ul {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -181,9 +185,11 @@ ul {
 /* 主要内容区域 */
 .main {
     flex-grow: 1;
-    padding: 100px 20px 40px;
+    padding: 100px 20px 40px 20px;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    /* 不要用flex，保持块级布局 */
 }
 
 /* 文章卡片样式 */

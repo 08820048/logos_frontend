@@ -33,12 +33,13 @@ function renderMarkdown(markdown) {
         pedantic: false,
         gfm: true,
         breaks: false,
-        sanitize: true, // 启用HTML转义以防止XSS攻击
+
         smartypants: false,
         xhtml: false
     });
     
-    return marked.parse(markdown);
+    // 渲染后用DOMPurify过滤，防止XSS
+    return DOMPurify.sanitize(marked.parse(markdown));
 }
 
 /**

@@ -2,10 +2,6 @@
  * Logos 博客工具函数
  */
 
-// 引入 marked.js 用于 Markdown 渲染
-document.write('<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>');
-document.write('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/github.min.css">');
-document.write('<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/highlight.min.js"></script>');
 
 /**
  * 格式化日期

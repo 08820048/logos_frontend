@@ -29,6 +29,7 @@ async function loadPosts(page = 1, limit = CONFIG.POSTS_PER_PAGE) {
         // 渲染文章列表
         data.posts.forEach(postData => {
             const { post, tags } = postData;
+            console.log('Creating link for post.id:', post.id, 'Title:', post.title); // Debugging post.id
             const postElement = document.createElement('div');
             postElement.className = 'post-card';
             

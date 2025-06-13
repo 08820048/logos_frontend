@@ -13,7 +13,14 @@ async function loadPostDetail(postId) {
     postDetailContainer.innerHTML = '<div class="loading">加载中...</div>';
     
     try {
+        console.log('Loading post detail for ID:', postId);
+        console.log('API URL:', `${CONFIG.API_BASE_URL}/api/posts/${postId}`);
+        
         const response = await fetch(`${CONFIG.API_BASE_URL}/api/posts/${postId}`);
+        
+        console.log('Response status:', response.status);
+        console.log('Response ok:', response.ok);
+        
         if (!response.ok) {
             if (response.status === 404) {
                 throw new Error('文章不存在');
@@ -22,6 +29,7 @@ async function loadPostDetail(postId) {
         }
         
         const data = await response.json();
+        console.log('Post data:', data);
         const { post, tags } = data;
         
         // 设置页面标题
@@ -34,7 +42,7 @@ async function loadPostDetail(postId) {
                 <span>发布于 ${formatDate(post.created_at)}</span>
                 <span>${post.view_count || 0} 阅读</span>
             </div>
-            <div class="post-content">${renderMarkdown(post.content)}</div>
+            <div class="post-content">${renderMarkdown(post.content_md || post.content || '')}</div>
         `;
         
         // 渲染文章标签

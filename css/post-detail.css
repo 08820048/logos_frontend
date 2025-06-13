@@ -183,6 +183,10 @@
 /* 文章标签 */
 .post-tags {
     margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .post-tags .tag {

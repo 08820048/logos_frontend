@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>友链 - Logos 博客</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme-switch.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <!-- 背景效果 -->
+        <div class="bg-effect"></div>
+        
+        <!-- 头部导航 -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"></circle>
+                        <circle cx="12" cy="12" r="3" fill="currentColor"></circle>
+                    </svg>
+                    <span>Logos</span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="tags.html">标签</a></li>
+                        <li><a href="links.html" class="active">友链</a></li>
+                        <li><a href="about.html">关于</a></li>
+                    </ul>
+                </nav>
+                <div class="theme-switch-container">
+                    <label class="theme-switch" for="themeToggle">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="theme-icon light-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </span>
+                </div>
+                <div class="search-icon" id="searchIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+            </div>
+            <!-- 搜索框 -->
+            <div class="search-container" id="searchContainer">
+                <div class="search-inner">
+                    <input type="text" id="searchInput" placeholder="搜索文章...">
+                    <button id="searchButton">搜索</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主要内容 -->
+        <main class="main">
+            <h2 class="section-title">友情链接</h2>
+            
+            <div class="links-container">
+                <div class="links-grid" id="friendLinks">
+                    <!-- 友链将通过JavaScript动态加载 -->
+                    <div class="loading">加载中...</div>
+                </div>
+                
+                <div class="links-info">
+                    <h3>申请友链</h3>
+                    <p>如果您想与我们交换友链，请确保您的网站符合以下条件：</p>
+                    <ul>
+                        <li>网站内容健康，无违法内容</li>
+                        <li>网站稳定，访问速度良好</li>
+                        <li>网站有实质性内容，非空壳站点</li>
+                    </ul>
+                    <p>符合条件请通过邮件联系我们：<a href="mailto:contact@example.com">contact@example.com</a></p>
+                </div>
+            </div>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="copyright">
+                    <p>&copy; 2025 Logos 博客 | <a href="rss.xml" target="_blank">RSS订阅</a> | <a href="https://github.com/08820048/logos/tree/main" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 脚本 -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/theme-switch.js"></script>
+    <script src="js/links.js"></script>
+</body>
+</html>

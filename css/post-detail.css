@@ -1,0 +1,343 @@
+/**
+ * 文章详情页样式
+ */
+
+/* 文章详情容器 */
+.post-detail {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(16px);
+}
+
+/* 文章标题 */
+.post-detail h1 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    color: var(--text-color);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* 文章元信息 */
+.post-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+.post-meta span {
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.post-meta svg {
+    margin-right: 6px;
+}
+
+/* 文章内容样式 */
+.post-content {
+    color: var(--text-color);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* 文章内容中的标题 */
+.post-content h2 {
+    font-size: 1.8rem;
+    margin: 36px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.post-content h3 {
+    font-size: 1.5rem;
+    margin: 28px 0 14px;
+}
+
+.post-content h4 {
+    font-size: 1.3rem;
+    margin: 24px 0 12px;
+}
+
+/* 文章内容中的段落 */
+.post-content p {
+    margin-bottom: 20px;
+}
+
+/* 文章内容中的列表 */
+.post-content ul, 
+.post-content ol {
+    margin: 0 0 20px 20px;
+}
+
+.post-content li {
+    margin-bottom: 8px;
+}
+
+/* 文章内容中的引用 */
+.post-content blockquote {
+    border-left: 4px solid var(--primary-color);
+    padding: 12px 20px;
+    margin: 20px 0;
+    background-color: rgba(42, 171, 238, 0.05);
+    color: var(--light-text);
+}
+
+/* 文章内容中的链接 */
+.post-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--primary-color);
+    transition: var(--transition);
+}
+
+.post-content a:hover {
+    border-bottom-style: solid;
+}
+
+/* 文章内容中的图片 */
+.post-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: var(--shadow);
+}
+
+/* 文章内容中的代码 */
+.post-content code {
+    font-family: 'Fira Code', monospace;
+    background-color: var(--hover-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.post-content pre {
+    background-color: var(--hover-bg);
+    border-radius: 8px;
+    padding: 16px;
+    overflow-x: auto;
+    margin: 20px 0;
+    border: 1px solid var(--border-color);
+}
+
+.post-content pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* 文章内容中的表格 */
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    overflow-x: auto;
+    display: block;
+}
+
+.post-content th,
+.post-content td {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.post-content th {
+    background-color: var(--hover-bg);
+    font-weight: 600;
+}
+
+/* 文章标签 */
+.post-tags {
+    margin: 30px 0;
+}
+
+.post-tags .tag {
+    display: inline-block;
+    background-color: var(--card-bg);
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.post-tags .tag:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 返回按钮 */
+.back-button {
+    margin-bottom: 20px;
+}
+
+.back-button a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.back-button a:hover {
+    background-color: var(--hover-bg);
+}
+
+.back-button svg {
+    margin-right: 8px;
+}
+
+/* 评论区样式 */
+.comments-section {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(16px);
+}
+
+.comments-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.comments-list {
+    margin-bottom: 30px;
+}
+
+.comment-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.comment-author {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.comment-date {
+    color: var(--lighter-text);
+    font-size: 0.9rem;
+}
+
+.comment-content {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* 评论表单 */
+.comment-form {
+    background-color: var(--hover-bg);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.comment-form h3 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-submit:hover {
+    background-color: var(--secondary-color);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .post-detail {
+        padding: 20px;
+    }
+    
+    .post-detail h1 {
+        font-size: 1.8rem;
+    }
+    
+    .comments-section {
+        padding: 20px;
+    }
+}
+
+/* 暗色模式适配 */
+[data-theme="dark"] .post-content pre,
+[data-theme="dark"] .post-content code {
+    background-color: #1e1e1e;
+}
+
+[data-theme="dark"] .hljs {
+    background-color: #1e1e1e;
+}
+
+/* 加载状态 */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: var(--light-text);
+}

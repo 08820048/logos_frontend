@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章详情 - Logos 博客</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme-switch.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 代码高亮样式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/github.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/github-dark.min.css" media="(prefers-color-scheme: dark), (data-theme: dark)">
+    <!-- 文章详情页样式 -->
+    <link rel="stylesheet" href="css/post-detail.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- 背景效果 -->
+        <div class="bg-effect"></div>
+        <!-- 头部导航 -->
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"></circle>
+                        <circle cx="12" cy="12" r="3" fill="currentColor"></circle>
+                    </svg>
+                    <span>Logos</span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="tags.html">标签</a></li>
+                        <li><a href="links.html">友链</a></li>
+                        <li><a href="about.html">关于</a></li>
+                    </ul>
+                </nav>
+                <div class="theme-switch-container">
+                    <label class="theme-switch" for="themeToggle">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="theme-icon light-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </span>
+                </div>
+                <div class="search-icon" id="searchIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+            </div>
+            <!-- 搜索框 -->
+            <div class="search-container" id="searchContainer">
+                <div class="search-inner">
+                    <input type="text" id="searchInput" placeholder="搜索文章...">
+                    <button id="searchButton">搜索</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主要内容 -->
+        <main class="main">
+            <!-- 返回按钮 -->
+            <div class="back-button">
+                <a href="javascript:history.back()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    返回
+                </a>
+            </div>
+
+            <!-- 文章详情 -->
+            <article class="post-detail" id="postDetail">
+                <!-- 文章内容将通过JavaScript动态加载 -->
+                <div class="loading">加载中...</div>
+            </article>
+
+            <!-- 标签 -->
+            <div class="post-tags" id="postTags">
+                <!-- 标签将通过JavaScript动态加载 -->
+            </div>
+
+            <!-- 评论区 -->
+            <section class="comments-section">
+                <h2>评论</h2>
+                <div class="comments-list" id="commentsList">
+                    <!-- 评论将通过JavaScript动态加载 -->
+                </div>
+
+                <!-- 评论表单 -->
+                <div class="comment-form">
+                    <h3>发表评论</h3>
+                    <form id="commentForm">
+                        <div class="form-group">
+                            <label for="nickname">昵称</label>
+                            <input type="text" id="nickname" name="nickname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="content">评论内容</label>
+                            <textarea id="content" name="content" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">提交评论</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="copyright">
+                    <p>&copy; 2025 Logos 博客 | <a href="rss.xml" target="_blank">RSS订阅</a> | <a href="https://github.com/08820048/logos/tree/main" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 脚本 -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/theme-switch.js"></script>
+    <!-- Markdown解析和代码高亮 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/languages/javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/languages/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/languages/css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/languages/html.min.js"></script>
+    <script src="js/post.js"></script>
+</body>
+</html>

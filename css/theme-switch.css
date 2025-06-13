@@ -1,0 +1,112 @@
+/* 暗色模式切换开关 */
+.theme-switch-container {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin: 0 8px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.theme-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+/* 调整header和搜索图标 */
+.header {
+    width: auto !important;
+}
+
+.header-inner {
+    width: auto;
+    max-width: 1200px;
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* 暗色模式变量 */
+:root {
+    --primary-color: #2AABEE;
+    --secondary-color: #229ED9;
+    --text-color: #333;
+    --light-text: #666;
+    --lighter-text: #999;
+    --bg-color: #F5F5F5;
+    --card-bg: #FFFFFF;
+    --border-color: #E6E6E6;
+    --hover-bg: #F0F2F5;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --primary-color: #2AABEE;
+    --secondary-color: #229ED9;
+    --text-color: #E4E4E4;
+    --light-text: #ABABAB;
+    --lighter-text: #888888;
+    --bg-color: #121212;
+    --card-bg: rgba(30, 30, 30, 0.7);
+    --border-color: #333333;
+    --hover-bg: #252525;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}

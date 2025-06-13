@@ -56,7 +56,7 @@ async function loadPostDetail(postId) {
         
         // 代码高亮
         document.querySelectorAll('pre code').forEach((block) => {
-            hljs.highlightBlock(block);
+            hljs.highlightElement(block);
         });
         
         // 加载评论

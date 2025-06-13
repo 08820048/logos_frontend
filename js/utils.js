@@ -33,7 +33,7 @@ function renderMarkdown(markdown) {
         pedantic: false,
         gfm: true,
         breaks: false,
-        sanitize: false,
+        sanitize: true, // 启用HTML转义以防止XSS攻击
         smartypants: false,
         xhtml: false
     });
